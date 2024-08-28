@@ -1,0 +1,419 @@
+2024-08-21 16:11:41 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-21 16:32:27 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 2
+2024-08-21 16:32:32 [main] WARN  com.db.controller.EmpController [handleStoreAllEmployees] - No employees to store
+2024-08-22 14:04:00 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 14:06:28 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 2
+2024-08-22 14:06:39 [main] INFO  com.db.controller.EmpController [handleGetEmployeeById] - Fetched employee by ID: 1
+2024-08-22 14:07:47 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=2, empName='khuswanth', phoneNo='7671086912', email='khuswanth@gmail.com', address=Address{empId=2, country='India', state='Ap', city='Tirupati', location='Lakeshmi puram', pin=517501}}
+2024-08-22 14:08:11 [main] INFO  com.db.controller.EmpController [handleAddDepartment] - Added department: Dept{depId=10, depName='css'}
+2024-08-22 14:08:22 [main] INFO  com.db.controller.EmpController [handleStoreAllEmployees] - Stored all employees to file: D:\java\employee.txt
+2024-08-22 14:08:33 [main] WARN  com.db.controller.EmpController [handleGetAllDepartments] - No departments found
+2024-08-22 14:16:39 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 2
+2024-08-22 14:16:52 [main] INFO  com.db.controller.EmpController [handleAddDepartment] - Added department: Dept{depId=111, depName='it'}
+2024-08-22 14:17:00 [main] WARN  com.db.controller.EmpController [handleGetAllDepartments] - No departments found
+2024-08-22 14:18:28 [main] WARN  com.db.controller.EmpController [handleStoreAllEmployees] - No employees to store
+2024-08-22 14:18:47 [main] WARN  com.db.controller.EmpController [handleGetAllDepartments] - No departments found
+2024-08-22 14:19:36 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 14:20:42 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=100, empName='kushu', phoneNo='7671085912', email='khuswanth@gmail.com', address=Address{empId=100, country='india', state='ap', city='tpt', location='yqh', pin=516501}}
+2024-08-22 14:20:54 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 14:21:16 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.lang.NullPointerException: Cannot invoke "com.db.com.pack.Employee.setEmpName(String)" because "employee" is null
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:220) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:98) [classes/:?]
+2024-08-22 14:22:33 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 14:22:49 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.util.InputMismatchException: null
+	at java.base/java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.base/java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:213) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:98) [classes/:?]
+2024-08-22 14:23:28 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 14:23:47 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='', phoneNo='ds', email='qws', address=null}
+2024-08-22 14:24:00 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.lang.NullPointerException: Cannot invoke "com.db.com.pack.Employee.setEmpName(String)" because "employee" is null
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:220) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:98) [classes/:?]
+2024-08-22 14:44:44 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 2
+2024-08-22 14:46:42 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 2
+2024-08-22 15:01:58 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 15:02:54 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 15:41:34 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 15:42:26 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khuswanth', phoneNo='76718912', email='kushu@gmail.com', address=Address{empId=1, country='india', state='ap', city='tpt', location='aa', pin=517100}}
+2024-08-22 15:42:31 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 15:42:41 [main] WARN  com.db.controller.EmpController [handleGetAllDepartments] - No departments found
+2024-08-22 15:43:27 [main] INFO  com.db.controller.EmpController [main] - Initialized services with storage type: 1
+2024-08-22 15:44:11 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khusj', phoneNo='20290920', email='khusnth@gamil.com', address=Address{empId=1, country='india', state='ap', city='jwb', location='sqsaz', pin=819092}}
+2024-08-22 15:44:22 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 15:44:37 [main] WARN  com.db.controller.EmpController [handleStoreAllEmployees] - No employees to store
+2024-08-22 21:06:57 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'your_username'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:70) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:08:26 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'your_username'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:70) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:08:42 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'your_username'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:70) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:11:14 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:27) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:11:49 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:27) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:14:15 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khuswanth', phoneNo='7671086912', email='khuswanth', address=Address{empId=1, country='india', state='ap', city='tipt', location='sfs', pin=623037}}
+2024-08-22 21:14:22 [main] INFO  com.db.controller.EmpController [handleGetAllEmployees] - Fetched all employees, count: 1
+2024-08-22 21:15:08 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.lang.NullPointerException: Cannot invoke "com.db.com.pack.Address.getEmpId()" because "address" is null
+	at com.db.Repository.Emp.InMemoryAddressEmployeeEmp.updateAdress(InMemoryAddressEmployeeEmp.java:58) ~[classes/:?]
+	at com.db.Service.Emp.EmployeeServiceEmp.updateEmp(EmployeeServiceEmp.java:85) ~[classes/:?]
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:245) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:96) [classes/:?]
+2024-08-22 21:17:05 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Failed to add employee due to duplicate record
+com.db.Exception.DuplicateEmployeeRecordException: With this id already Emp exists1
+	at com.db.Repository.Emp.InMemoryEmployeeRepositoryEmp.addEmpId(InMemoryEmployeeRepositoryEmp.java:15) ~[classes/:?]
+	at com.db.Service.Emp.EmployeeServiceEmp.addEmpId(EmployeeServiceEmp.java:32) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:174) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:87) [classes/:?]
+2024-08-22 21:18:11 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=21, empName='jk', phoneNo='38193827189', email='khjake@gmail.com', address=Address{empId=21, country='india', state='ghsyjujhbz', city='gwudscjh', location='ghfdc', pin=571802}}
+2024-08-22 21:18:31 [main] INFO  com.db.controller.EmpController [main] - Exiting the application
+2024-08-22 21:21:01 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khuswanth', phoneNo='3279809192', email='khuswanth', address=Address{empId=1, country='indian', state='ap', city='dqws', location='11', pin=5424}}
+2024-08-22 21:21:19 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.lang.NullPointerException: Cannot invoke "com.db.com.pack.Employee.setEmpName(String)" because "employee" is null
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:228) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:96) [classes/:?]
+2024-08-22 21:25:29 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:27) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:27:25 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:27) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:44:29 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 21:47:34 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khusanth', phoneNo='7671085912', email='khuswanth@gmail.com', address=Address{empId=1, country='india', state='ap', city='tpa', location='aa', pin=890011}}
+2024-08-22 21:47:54 [main] ERROR com.db.controller.EmpController [handleUpdateEmployee] - Unexpected error occurred while updating employee
+java.lang.NullPointerException: Cannot invoke "com.db.com.pack.Employee.setEmpName(String)" because "employee" is null
+	at com.db.controller.EmpController.handleUpdateEmployee(EmpController.java:228) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:96) [classes/:?]
+2024-08-22 21:48:50 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 22:06:13 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khuswnarth', phoneNo='3421324553', email='fmcjj@gmail.com', address=Address{empId=1, country='india', state='ap', city='jdsjsn', location='edasd', pin=984019}}
+2024-08-22 22:06:47 [main] INFO  com.db.controller.EmpController [handleUpdateEmployeeAddress] - Updated address for employee ID: 1
+2024-08-22 22:07:08 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 22:07:15 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 22:07:31 [main] WARN  com.db.controller.EmpController [handleStoreAllEmployees] - No employees to store
+2024-08-22 22:08:17 [main] ERROR com.db.controller.EmpController [main] - Unexpected error occurred
+java.lang.NumberFormatException: For input string: "D:\java\employees.txt"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:588) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:685) ~[?:?]
+	at com.db.controller.EmpController.main(EmpController.java:50) [classes/:?]
+2024-08-22 22:08:32 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:56) [classes/:?]
+2024-08-22 22:12:09 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 22:15:11 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:54) [classes/:?]
+2024-08-22 22:15:57 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.lang.NullPointerException: Cannot invoke "com.db.Service.Emp_service.getAllEmp()" because "com.db.controller.EmpController.employeeService" is null
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:175) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:87) [classes/:?]
+2024-08-22 22:28:10 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:29:19 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:32:15 [main] INFO  com.db.controller.EmpController [handleGetEmployeeById] - Fetched employee by ID: 2
+2024-08-22 22:33:35 [main] DEBUG com.db.controller.EmpController [handleAddEmployee] - Existing employees: []
+2024-08-22 22:33:35 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khushu', phoneNo='767185912', email='khushu@gmail.com', address=Address{empId=12, country='india', state='ap', city='45678', location='gfhh', pin=779970}}
+2024-08-22 22:34:11 [main] INFO  com.db.controller.EmpController [handleStoreAllEmployees] - Stored all employees to file: D:\java\employees.txt
+2024-08-22 22:35:42 [main] INFO  com.db.controller.EmpController [main] - Exiting the application
+2024-08-22 22:36:43 [main] DEBUG com.db.controller.EmpController [handleAddEmployee] - Existing employees: null
+2024-08-22 22:36:43 [main] INFO  com.db.controller.EmpController [handleAddEmployee] - Added employee: Employee{empId=1, empName='khuswanth', phoneNo='62893290', email='khushu@gmail.com', address=Address{empId=1, country='india', state='ap', city='tpt', location='sdwd', pin=880100}}
+2024-08-22 22:37:19 [main] WARN  com.db.controller.EmpController [handleStoreAllEmployees] - No employees to store
+2024-08-22 22:37:33 [main] WARN  com.db.controller.EmpController [handleGetAllEmployees] - No employees found
+2024-08-22 22:37:44 [main] INFO  com.db.controller.EmpController [main] - Exiting the application
+2024-08-22 22:37:59 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:39:17 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:40:05 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.lang.NullPointerException: Cannot invoke "com.db.Service.Emp_service.getAllEmp()" because "com.db.controller.EmpController.employeeService" is null
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-22 22:40:10 [main] ERROR com.db.controller.EmpController [handleStoreAllEmployees] - Unexpected error occurred while storing employees
+java.lang.NullPointerException: Cannot invoke "com.db.Service.Emp_service.getAllEmp()" because "com.db.controller.EmpController.employeeService" is null
+	at com.db.controller.EmpController.handleStoreAllEmployees(EmpController.java:385) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:105) [classes/:?]
+2024-08-22 22:43:08 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'yourUsername'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:21) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:47:19 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'your_username'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:15) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:48:24 [main] ERROR com.db.controller.EmpController [main] - Failed to connect to MySQL database
+java.sql.SQLException: Access denied for user 'your_username'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.db.util.DatabaseConnects.getConnection(DatabaseConnects.java:15) ~[classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:55) [classes/:?]
+2024-08-22 22:49:37 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.lang.NullPointerException: Cannot invoke "com.db.Service.Emp_service.getAllEmp()" because "com.db.controller.EmpController.employeeService" is null
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-22 22:49:49 [main] ERROR com.db.controller.EmpController [handleStoreAllEmployees] - Unexpected error occurred while storing employees
+java.lang.NullPointerException: Cannot invoke "com.db.Service.Emp_service.getAllEmp()" because "com.db.controller.EmpController.employeeService" is null
+	at com.db.controller.EmpController.handleStoreAllEmployees(EmpController.java:385) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:105) [classes/:?]
+2024-08-23 07:34:34 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 07:48:40 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 07:48:52 [main] ERROR com.db.controller.EmpController [handleStoreAllEmployees] - Unexpected error occurred while storing employees
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleStoreAllEmployees(EmpController.java:395) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:105) [classes/:?]
+2024-08-23 07:50:36 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:62) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 10:11:00 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 10:11:45 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 10:14:24 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 10:15:06 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 10:18:14 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 10:18:57 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 10:26:57 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 10:27:48 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:178) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:78) [classes/:?]
+2024-08-23 10:28:33 [main] ERROR com.db.controller.EmpController [handleStoreAllEmployees] - Unexpected error occurred while storing employees
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:63) ~[classes/:?]
+	at com.db.controller.EmpController.handleStoreAllEmployees(EmpController.java:395) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:105) [classes/:?]
+2024-08-23 10:42:38 [main] INFO  com.db.controller.EmpController [main] - Initialized services with MySQL database
+2024-08-23 10:43:18 [main] ERROR com.db.controller.EmpController [handleAddEmployee] - Unexpected error occurred while adding employee
+java.sql.SQLSyntaxErrorException: Table 'employeedb.employees' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1352) ~[mysql-connector-j-9.0.0.jar:9.0.0]
+	at com.db.Service.Emp.EmployeeServiceEmp.getAllEmp(EmployeeServiceEmp.java:68) ~[classes/:?]
+	at com.db.controller.EmpController.handleAddEmployee(EmpController.java:250) [classes/:?]
+	at com.db.controller.EmpController.main(EmpController.java:150) [classes/:?]
