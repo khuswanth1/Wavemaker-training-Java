@@ -182,10 +182,10 @@ public class EmpController {
         sc.nextLine();
 
         try {
-            // Fetch the employee by ID
+           
             Employee employee = employeeService.getEmpId(empId);
 
-            // Display update options
+            
             System.out.println("Select the detail to update:");
             System.out.println("1. Update Name");
             System.out.println("2. Update Phone Number");
@@ -256,9 +256,7 @@ public class EmpController {
             System.out.println("5. Update Pincode");
 
             int addressUpdateChoice = sc.nextInt();
-            sc.nextLine();  // Consume newline
-
-            // Update the appropriate address field based on user choice
+            sc.nextLine(); 
             switch (addressUpdateChoice) {
                 case 1:
                     System.out.println("Enter new Country:");
@@ -284,14 +282,12 @@ public class EmpController {
                     System.out.println("Enter new Pincode:");
                     int pincode = sc.nextInt();
                     address.setPin(pincode);
-                    sc.nextLine();  // Consume newline
+                    sc.nextLine();  
                     break;
                 default:
                     System.out.println("Invalid choice! Please try again.");
                     return;
             }
-
-            // Update the address using the service
             addressService.updateAddress(address);
             System.out.println("Address updated successfully.");
         } catch (Exception e) {
