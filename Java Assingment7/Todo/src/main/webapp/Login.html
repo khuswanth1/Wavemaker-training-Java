@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F175684%2Ftodo&psig=AOvVaw2czWOpcwI2Cr1xsqTP6V7s&ust=1724819392788000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICtlIyrlIgDFQAAAAAdAAAAABAE">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center mt-5">Login</h2>
+            <form action="http://localhost:8080/Todo/login" method="POST">
+                <div class="form-group mb-3">
+                    <label for="username">Username/Email ID</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username/Email ID" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-20">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
