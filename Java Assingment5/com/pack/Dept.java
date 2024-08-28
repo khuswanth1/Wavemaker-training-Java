@@ -4,7 +4,6 @@ public class Dept {
     private int depId;
     private String depName;
 
-    // Getters and Setters
     public int getDepId() {
         return depId;
     }
