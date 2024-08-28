@@ -7,8 +7,6 @@ public class Address extends Employee {
     private String city;
     private String location;
     private int pin;
-
-    // Getters and Setters
    public int getEmpId() {
         return empId;
     }
