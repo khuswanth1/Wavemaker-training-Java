@@ -41,7 +41,7 @@ public class EmployeeServiceEmp implements Emp_service {
         List<Employee> employeeList = employeeRepository.getAllEmp();
         if (employeeList == null || employeeList.isEmpty()) {
             System.out.println("No employees found.");
-            return employeeList; // Returning empty list if no employees are found
+            return employeeList; 
         }
 
         for (Employee employee : employeeList) {
@@ -68,7 +68,7 @@ public class EmployeeServiceEmp implements Emp_service {
     @Override
     public Employee getEmpId(int id) {
         Employee emp = employeeRepository.getEmpId(id);
-        if (emp != null) {  // Check if employee exists
+        if (emp != null) { 
             emp.setAddress(addressRepository.getAddressByEmpId(emp.getEmpId()));
         }
         return emp;
