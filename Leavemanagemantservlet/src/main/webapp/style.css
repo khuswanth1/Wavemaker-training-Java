@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.leave-container {
+    display:block;
+    width:800px;
+}
+.mainHeading {
+margin-left:365px;
+color: #3e7057;
+    font-weight: bold;
+    font-size: 38px;
+}
+team-leave-header {
+     display: flex;
+     padding: 10px;
+     margin-bottom: 10px;
+     border: 1px solid black;
+     border-radius: 5px;
+ }
+.team-leave-item {
+    border: 1px solid #ddd;
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 6px;
+    padding-top:7px;
+    background-color:  #d6f5f5
+}
+.team-employee,.team-leaveType, .team-dateFrom, .team-dateTo, .team-reason, .team-status, .team-date {
+     width:120px;
+    flex-direction: column;
+}
+.team-details {
+margin-right:10px;
+}
+.team-button {
+width: 180px;
+display: flex;
+}.team-approve, .team-reject {
+ width: 100px;
+ margin-right: 10px;
+ }.team-action {
+  padding-left: 50px;
+  }
+.leave-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+.leave-item h4 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.logoutBtn, .userName {
+display: none;
+}
+
+#leave-header, #team-leave-header {
+border: 1px solid black;
+margin-bottom: 5px;
+ padding: 10px;
+ background-color: rebeccapurple;
+}
+
+.flex-column {
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#profileContainer {
+position:fixed;
+left:90%;
+top:5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.employeeDialog {
+top: 25%;
+position: fixed;
+z-index: 1;
+margin-bottom: 200px;
+background-color:  aquamarine;
+display: none;
+}
+.leaveTracker {
+background-color:aquamarine;
+bottom:30%;
+left:70%;
+width:350px;
+height:200px;
+display:flex;
+flex-direction:row;
+position:fixed;
+z-index: 1;
+}
+.teamLeaveTracker {
+top:50%;
+left:70%;
+bottom:30%;
+right:70%;
+background-color:aquamarine;
+
+width:250px;
+height:200px;
+
+background-color:#c2d6d6;
+display:none;
+}
+p{
+padding-right:2px;
+padding-left:5px;
+}
+.column {
+justify-content:Center;
+gap:20px;
+}
+#addLeaveBtn{
+position:fixed;
+left:76%;
+top:5%;
+}
+
+
+#leaveForm {
+    display: none;
+    position:fixed;
+    width:350px;
+    height:500px;
+    top:6%;
+    left:35%;
+    z-index: 1;
+}
+.teamApproveButton {
+margin-right:30px;
+}
+.heading {
+padding-right:10px;
+}
+
+
+

@@ -1,0 +1,215 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leave Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mainContainer">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mainHeading">Leave Management</h2>
+        <div class="d-flex align-items-center" id="profileContainer">
+            <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="  alt="Profile" class="rounded-circle me-2" width="40" id="profilePic">
+            <span id="userName">Khuswanth</span>
+            <button id="logoutBtn" class="btn btn-danger mt-2">Logout</button>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+
+    <ul class="nav nav-tabs mb-4" id="tabs">
+        <li class="nav-item">
+            <a class="nav-link" id="HomeTab" href="#Home">Home</a>
+        <li class="nav-item">
+            <a class="nav-link" id="leaveRequestsTab" href="#leaveRequests">My Leave Requests</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="teamLeaveRequestsTab" href="#teamLeaveRequests">Team Leave Requests</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="Home">
+            <div class="card p-4">
+                <h2>1. Application Roles</h2>
+                <ol>
+                    <li><strong>Employee:</strong>
+                        <ul>
+                            <li>Employees can log into the system to manage their leave requests.</li>
+                            <li><strong>Leave Request:</strong> Employees can apply for different types of leave (e.g., Sick, Paid Time Off (PTO), etc.). They need to specify the leave type, start date (FromDate), end date (ToDate), and a reason or comments for the leave.</li>
+                            <li><strong>Leave Status Page:</strong> Employees can view the status of their applied leaves (approved, pending, or rejected). They can also see the total leaves they have taken in the current year (financial year: 01-Apr-2024 to 31-Mar-2025).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manager:</strong>
+                        <ul>
+                            <li>Managers have additional responsibilities in the system, as they oversee the leave requests submitted by their team members.</li>
+                            <li><strong>Leave Approval/Reject:</strong> Managers can view a list of pending leave requests from employees under their supervision. They have the authority to approve or reject these leave requests.</li>
+                            <li><strong>Team Leave Overview:</strong> Managers can view a list of employees in their team, showing the number of leaves each employee has taken and indicating whether any team member is currently on leave.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>2. Database Schema</h2>
+                <ul>
+                    <li><strong>EMPLOYEE Table:</strong> Contains information about all employees, including their manager, as every manager is also an employee in the system.</li>
+                    <li><strong>LEAVE_REQ Table:</strong> Stores details of all leave requests, including the employee ID, leave type, start and end dates, reason, and status (approved, rejected, or pending).</li>
+                    <li><strong>LEAVABALANCE Table:</strong> Tracks the leave balance for each employee, helping in determining how many leaves an employee has taken and how many are remaining.</li>
+                    <li><strong>LOGIN Table:</strong> Manages the login credentials for employees, ensuring secure access to the system.</li>
+                </ul>
+
+                <h2>3. Key Features</h2>
+                <ol>
+                    <li><strong>User Authentication:</strong>
+                        <ul>
+                            <li>The application includes a login system where employees and managers authenticate using their credentials.</li>
+                            <li>The login is handled through servlets (<code>LoginServlet</code> and <code>LogoutServlet</code>), and sessions are managed for secure access.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Leave Application:</strong>
+                        <ul>
+                            <li>Employees can apply for leave, and the system automatically forwards the request to the appropriate manager for approval.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Leave Approval/Management:</strong>
+                        <ul>
+                            <li>Managers can see all leave requests from their team members, with options to approve or reject the requests.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Real-time Leave Status:</strong>
+                        <ul>
+                            <li>Employees can view the status of their applied leaves in real-time, and managers can get an overview of the leave situation in their teams.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Leave Balances:</strong>
+                        <ul>
+                            <li>The system tracks how many leaves an employee has taken and how many are left, based on the organization's leave policy.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>4. UI and Frontend</h2>
+                <ul>
+                    <li><strong>Bootstrap UI:</strong> The user interface is being built using Bootstrap for a responsive and user-friendly design. The layout includes:
+                        <ul>
+                            <li><strong>Profile Button:</strong> Access to employee profile information.</li>
+                            <li><strong>Leave Request Section:</strong> A form for employees to submit new leave requests.</li>
+                            <li><strong>Manager-specific Section:</strong> A section visible only to managers where they can approve or reject leave requests.</li>
+                            <li><strong>Logout Button:</strong> Allows users to securely log out of the application.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>5. Development and Testing</h2>
+                <ol>
+                    <li><strong>API Development:</strong>
+                        <ul>
+                            <li>The backend APIs are being developed to handle the various operations, such as applying for leave, approving/rejecting leave, and managing leave balances.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Postman Testing:</strong>
+                        <ul>
+                            <li>The APIs are tested using Postman to ensure they function correctly before integration with the UI.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Service Layer:</strong>
+                        <ul>
+                            <li>The application follows a service-oriented architecture, with various service layers handling business logic and data processing.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+
+                <div class="tab-content">
+        <div class="tab-pane active" id="leaveRequests">
+            <div class="leave-container" id="leaveContainer">
+                <div class="row" id="leave-header">
+                    <div class="col-md-2"><strong>Applied Date</strong></div>
+                    <div class="col-md-2"><strong>Leave Type</strong></div>
+                    <div class="col-md-2"><strong>Date From</strong></div>
+                    <div class="col-md-2"><strong>Date To</strong></div>
+                    <div class="col-md-2"><strong>Reason</strong></div>
+                    <div class="col-md-2"><strong>Status</strong></div>
+                </div>
+                <!-- leave requests adding here -->
+            </div>
+
+            <div>
+                <button id="addLeaveBtn" class="btn btn-primary">Add Leave</button>
+            </div>
+        </div>
+
+        <div class="tab-pane active" id="teamLeaveRequests">
+            <div class="team-leave-container" id="teamLeaveContainer">
+                <div class="team-leave-header" id="team-leave-header">
+                    <div class="team-employee"><strong>Applied Date</strong></div>
+                    <div class="team-employee"><strong>Applied By</strong></div>
+                    <div class="team-leaveType"><strong>Leave Type</strong></div>
+                    <div class="team-dateFrom"><strong>Date From</strong></div>
+                    <div class="team-dateTo"><strong>Date To</strong></div>
+                    <div class="team-reason"><strong>Reason</strong></div>
+                    <div class="team-status"><strong>Status</strong></div>
+                    <div class="team-action"><strong>Actions</strong></div>
+
+                </div>
+                <!-- team leave requests will be adding here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="leaveForm" class="card p-4 mt-4">
+        <h3 class="card-title">Add Leave Request</h3>
+        <form id="leaveRequestForm">
+            <div class="mb-3">
+                <label for="dateFrom" class="form-label">Date From:</label>
+                <input type="date" id="dateFrom" name="dateFrom" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="dateTo" class="form-label">Date To:</label>
+                <input type="date" id="dateTo" name="dateTo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="leaveName" class="form-label">Leave Type:</label>
+                <select id="leaveName" name="leaveName" class="form-control" required>
+                    <option value="SICK_LEAVE">Sick Leave</option>
+                    <option value="CASUAL">Casual Leave</option>
+                    <option value="MATERNITY">Maternity Leave</option>
+                    <option value="PATERNITY">Paternity Leave</option>
+                    <option value="PAID_LEAVE">Paid Leave</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="reason" class="form-label">Reason:</label>
+                <textarea id="reason" name="reason" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="button"  id="cancelButton" class="btn btn-danger">Cancel</button>
+        </form>
+    </div>
+    <div>
+        <dialog id="employeeDialog" class="employeeDialog">
+            <h2>Employee Details</h2>
+            <p><strong>Name:</strong> <span id="employeeName"></span></p>
+            <p><strong>DOB:</strong> <span id="employeeDOB"></span></p>
+            <p><strong>Gender:</strong> <span id="employeeGender"></span></p>
+            <p><strong>Phone Number:</strong> <span id="employeePhone"></span></p>
+            <button id="closeDialog" class="btn-btn-danger">Close</button>
+        </dialog>
+    </div>
+    <div>
+        <dialog id="leaveTrackerContent" class="leaveTrackerContent">
+        </dialog>
+    </div>
+    <div>
+        <dialog id="teamLeaveTrackerContent" class="teamLeaveTrackerContent">
+        </dialog>
+    </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
