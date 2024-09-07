@@ -14,7 +14,6 @@ const employeeName = document.getElementById('employeeName');
 const employeeDOB = document.getElementById('employeeDOB');
 const employeeGender = document.getElementById('employeeGender');
 const employeePhone = document.getElementById('employeePhone');
-const closeDialogButton = document.getElementById('closeDialog');
 const dialog = document.getElementById('employeeDialog');
 const trackerName = document.getElementById('trackerName');
 const trackerUsed = document.getElementById('trackerUsed');
@@ -38,30 +37,26 @@ const leaveStatusMapping = {
     'APPROVED': 'Approved'
 };
 
-logoutButton.style.display = 'none';
-userName.style.display = 'none';
-
+logoutButton.style.display = 'block';
+userName.style.display = 'block';
 document.addEventListener('DOMContentLoaded', () => {
 leaveRequestsTab.classList.add('active');
 teamHeader.style.display = 'none';
-    saveLeaves();
-    fetchUserProfile();
+    //saveLeaves();
+    // fetchUserProfile();
 });
 
     profilePic.addEventListener('click', function() {
    if (userName.style.display === 'none' || userName.style.display === '') {
-               fetchUserProfile(); // Fetch the user profile name
-               userName.style.display = 'block';
-               logoutButton.style.display = 'block';
+               fetchUserProfile();
+               userName.style.display = 'none';
+               logoutButton.style.display = 'none';
            } else {
                userName.style.display = 'none';
                logoutButton.style.display = 'none';
            }
 
     });
-
-
-
 teamLeavesTab.addEventListener('click', function() {
     console.log("inside team tab...");
 
@@ -72,25 +67,22 @@ teamLeavesTab.addEventListener('click', function() {
     leaveContainer.style.display = 'none';
     addLeaveBtn.style.display = 'none';
     trackerContent.style.display = 'none';
-
-    // Fetch and display team leave requests
+    teamTrackerContent.style.display = 'block';
     saveTeamLeaves();
 });
 
 personalLeavesTab.addEventListener('click', function() {
-    // Show personal leave container and hide team leave container
     leaveRequestsTab.classList.add('active');
     teamLeaveRequestsTab.classList.remove('active');
     leaveContainer.style.display = 'block';
     teamLeaveContainer.style.display = 'none';
     addLeaveBtn.style.display = 'block';
     teamHeader.style.display = 'none';
-    trackerContent.style.display = 'flex';
+    trackerContent.style.display = 'block';
 });
 
 document.getElementById('addLeaveBtn').addEventListener('click', function() {
 
-   fetchUserProfile();
 console.log("Inside add leave btn function......");
 console.log("gender.." + gender);
 
@@ -107,19 +99,11 @@ const leaveNameSelect = document.getElementById('leaveName');
         paternityOption.style.display = 'none';
         maternityOption.style.display = 'block';
     }
-
-
  const dateFromInput = document.getElementById('dateFrom');
      const dateToInput = document.getElementById('dateTo');
-
-     // Get today's date
      const today = new Date().toISOString().split('T')[0];
-
-     // Set the min attribute to today's date
      dateFromInput.setAttribute('min', today);
      dateToInput.setAttribute('min', today);
-
-     //Updating 'Date To' based on 'Date From'
      dateFromInput.addEventListener('change', function() {
          dateToInput.setAttribute('min', dateFromInput.value);
      });
@@ -128,20 +112,7 @@ const leaveNameSelect = document.getElementById('leaveName');
 
 });
 
-      function fetchUserProfile() {
-      console.log("Inside fetch profile..");
-            fetch('http://localhost:8080/Leava/leave/Emp?profile=1')
-                .then(response => response.json())
-                .then(data => {
-                console.log(data.gender);
-                    // Assuming the JSON response has a field called 'name'
-                    userName.textContent = data.name;
-                    gender = data.gender;
-                })
-                .catch(error => {
-                    console.error('Error fetching profile data:', error);
-                });
-        }
+     
 
 cancelButton.addEventListener('click', function() {
 document.getElementById('leaveRequestForm').reset();
@@ -150,7 +121,6 @@ document.getElementById('leaveForm').style.display = 'none';
 
 logoutButton.addEventListener('click', function() {
     console.log("inside logout btn");
-    // Perform the POST request to the logout endpoint
     fetch('http://localhost:8080/Leava/logout', {
         method: 'POST',
         headers: {
@@ -159,20 +129,18 @@ logoutButton.addEventListener('click', function() {
     })
     .then(response => {
         if (response.ok) {
-            // Redirect to login.html after successful logout
             window.location.href = 'login.html';
         } else {
             console.error('Logout failed:', response.statusText);
         }
     })
     .catch(error => {
-        // Handle network errors or other issues
         console.error('Network error during logout:', error);
     });
 });
 
 function saveLeaves() {
-    fetch('http://localhost:8080/Leava/leave/Apply', {
+    fetch('http://localhost:8080/Leava//leave/Apply', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -181,8 +149,6 @@ function saveLeaves() {
     .then(response => response.json())
     .then(data => {
         leaveContainer.querySelectorAll('.leave-item').forEach(item => item.remove());
-
-        // Iterate over each leave request and create leave items
         data.forEach(leave => {
             createLeaveRequest(leave.dateFrom, leave.dateTo, leave.leaveName, leave.reason, leave.status, leave.appliedDate);
         });
@@ -190,8 +156,6 @@ function saveLeaves() {
     .catch(error => {
         console.error('Error fetching leave requests:', error);
     });
-
-   //leaves tracker..
     leaveTracker();
 
 }
@@ -216,7 +180,6 @@ function leaveTracker() {
         const dialog = document.getElementById('leaveTrackerContent');
         dialog.innerHTML = '';
 
-        // Creating heading
         const headingDiv = document.createElement('div');
         headingDiv.classList.add('heading');
         headingDiv.innerHTML = `
@@ -244,8 +207,6 @@ function leaveTracker() {
         console.error('There was a problem with the fetch operation:', error);
     });
 }
-
-
 function saveTeamLeaves() {
     console.log("Inside Team leaves...");
     fetch('http://localhost:8080/Leava/leave/employeeLeaves', {
@@ -258,9 +219,7 @@ function saveTeamLeaves() {
     .then(data => {
         console.log("Data of employee leaves...");
         console.log(data);
-
         teamLeaveContainer.querySelectorAll('.team-leave-item').forEach(item => item.remove());
-
         data.forEach(leave => {
         console.log("Leave obj");
         console.log(leave);
@@ -272,50 +231,40 @@ function saveTeamLeaves() {
     });
 }
 
-document.getElementById('leaveRequestForm').addEventListener('submit', function(event) {
+document.getElementById('leaveRequestForm').addEventListener('submit', async function(event) {
     event.preventDefault();
-
     const dateFrom = document.getElementById('dateFrom').value;
     const dateTo = document.getElementById('dateTo').value;
     const leaveName = document.getElementById('leaveName').value;
     const reason = document.getElementById('reason').value;
-
     if(dateTo < dateFrom) {
     alert("Correct the selected dateFrom and dateTo");
     }
-
     const requestData = {
         dateFrom: dateFrom,
         dateTo: dateTo,
         leaveName: leaveName,
         reason: reason
     };
-
     console.log("Request data:");
     console.log(requestData);
-
-    // Make the POST API call
-    fetch('http://localhost:8080/Leava/leave/Apply', {
+    await fetch('http://localhost:8080/Leava/leave/Apply', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(requestData)
     })
-    .then(response => {
+    .then(async response => {
         if (!response.ok) {
-            // If response is not OK, throw an error with the response message
-            return response.json().then(errorData => {
-                throw new Error(errorData.error || 'Something went wrong');
-            });
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Something went wrong');
         }
         return response.json();
     })
     .then(data => {
         console.log('Leave request submitted:', data);
-
         createLeaveRequest(data.dateFrom, data.dateTo, data.leaveName, data.reason, data.status, data.appliedDate);
-
         document.getElementById('leaveRequestForm').reset();
         document.getElementById('leaveForm').style.display = 'none';
     })
@@ -324,17 +273,11 @@ document.getElementById('leaveRequestForm').addEventListener('submit', function(
         alert("Error: " + error.message);
     });
 });
-
-
-// Define the createLeaveRequest method
 function createLeaveRequest(dateFrom, dateTo, leaveName, reason, status, appliedDate) {
-
 const newLeaveName = leaveNameMapping[leaveName] || leaveName;
 const newStatus = leaveStatusMapping[status] || status;
-    // Create a new leave item row
     const leaveItem = document.createElement('div');
-    leaveItem.className = 'row mb-3 leave-item'; // Add a class for identification
-
+    leaveItem.className = 'row mb-3 leave-item';
     leaveItem.innerHTML = `
         <div class="col-md-2">${appliedDate}</div>
         <div class="col-md-2">${newLeaveName}</div>
@@ -343,111 +286,78 @@ const newStatus = leaveStatusMapping[status] || status;
         <div class="col-md-2">${reason}</div>
         <div class="col-md-2">${newStatus}</div>
     `;
-
-    // Append the new leave item to the container
     leaveContainer.appendChild(leaveItem);
     leaveTracker();
 }
-
 function createTeamLeaveRequest(leaveId, dateFrom, dateTo, leaveName, reason, status, employee, appliedBy, appliedDate) {
     console.log("Inside team leave request...");
     console.log(employee, dateFrom, dateTo, leaveName, reason, status);
-
 const newLeaveName = leaveNameMapping[leaveName] || leaveName;
 const newStatus = leaveStatusMapping[status] || status;
-
-
     let teamLeaveItem = document.createElement('div');
     teamLeaveItem.classList.add('team-leave-item');
     teamLeaveItem.setAttribute('id', leaveId);
-
-    // Create and append each div element
     let dateDiv = document.createElement('div');
         dateDiv.classList.add('team-date');
         dateDiv.textContent = appliedDate;
         teamLeaveItem.appendChild(dateDiv);
-
     let employeeDiv = document.createElement('div');
     employeeDiv.classList.add('team-employee');
     employeeDiv.textContent = employee;
     teamLeaveItem.appendChild(employeeDiv);
-
     let leaveTypeDiv = document.createElement('div');
     leaveTypeDiv.classList.add('team-leaveType');
     leaveTypeDiv.textContent = newLeaveName;
     teamLeaveItem.appendChild(leaveTypeDiv);
-
     let dateFromDiv = document.createElement('div');
     dateFromDiv.classList.add('team-dateFrom');
     dateFromDiv.textContent = dateFrom;
     teamLeaveItem.appendChild(dateFromDiv);
-
     let dateToDiv = document.createElement('div');
     dateToDiv.classList.add('team-dateTo');
     dateToDiv.textContent = dateTo;
     teamLeaveItem.appendChild(dateToDiv);
-
     let reasonDiv = document.createElement('div');
     reasonDiv.classList.add('team-reason');
     reasonDiv.textContent = reason;
     teamLeaveItem.appendChild(reasonDiv);
-
     let statusDiv = document.createElement('div');
     statusDiv.classList.add('team-status');
     statusDiv.textContent = newStatus;
     teamLeaveItem.appendChild(statusDiv);
-
     let approveButton, rejectButton;
     let buttonContainer = document.createElement('div');
-
     let detailsButton = document.createElement('button');
     detailsButton.classList.add('btn', 'btn-secondary', 'team-details');
     detailsButton.textContent = 'Details';
     buttonContainer.appendChild(detailsButton);
-
 if (status === 'PENDING') {
         buttonContainer.classList.add('team-button');
-
-        // Create and append the approve button
         approveButton = document.createElement('button');
         approveButton.classList.add('btn', 'btn-success', 'team-approve');
         approveButton.textContent = 'Approve';
         buttonContainer.appendChild(approveButton);
-
-        // Create and append the reject button
         rejectButton = document.createElement('button');
         rejectButton.classList.add('btn', 'btn-danger', 'team-reject');
         rejectButton.textContent = 'Reject';
         buttonContainer.appendChild(rejectButton);
-
-
     } else {
-        // Add class to hide button container if status is not 'PENDING'
         teamLeaveItem.classList.add('no-buttons');
     }
-
    teamLeaveItem.appendChild(buttonContainer);
-
-    // Finally, append the teamLeaveItem to the teamLeaveContainer
     teamLeaveContainer.appendChild(teamLeaveItem);
-
     detailsButtonEventListener(detailsButton, appliedBy);
-
-    // Call the event listener function only if buttons are created
     if (approveButton && rejectButton) {
         teamLeaveEventListener(approveButton, rejectButton, teamLeaveItem, appliedBy);
     }
 }
-
 function detailsButtonEventListener(detailsButton, appliedBy) {
 detailsButton.addEventListener('click', () => {
     detailsEventListener(detailsButton, appliedBy);
 });
 }
-
 function detailsEventListener(detailsButton, employeeId) {
         const apiUrl = `http://localhost:8080/Leava/leave/Emp?employeeId=${employeeId}`;
-
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -468,31 +378,19 @@ function detailsEventListener(detailsButton, employeeId) {
             });
  }
 
- closeDialogButton.addEventListener('click', function() {
- dialog.style.display = 'none';
- });
-
-
 function teamLeaveEventListener(approveButton, rejectButton, teamLeaveItem, appliedBy) {
     approveButton.addEventListener('click', function() {
         let leaveId = teamLeaveItem.getAttribute('id');
         sendEmployeeIdForLeaveTracker(appliedBy, 'Approve', leaveId, teamLeaveItem);
     });
-
     rejectButton.addEventListener('click', function() {
         let leaveId = teamLeaveItem.getAttribute('id');
          sendEmployeeIdForLeaveTracker(appliedBy, 'Reject', leaveId, teamLeaveItem);
     });
 }
-
-
 function sendEmployeeIdForLeaveTracker(appliedBy, buttonName, leaveId, teamLeaveItem) {
-
  console.log("inside team leave tracker...");
-    // API URL
     const apiUrl = `http://localhost:8080/Leava/leave/Tracker?appliedBy=${appliedBy}`;
-
-    // Fetch the leave tracker data
     fetch(apiUrl, {
         method: 'GET',
         headers: {
@@ -505,14 +403,10 @@ function sendEmployeeIdForLeaveTracker(appliedBy, buttonName, leaveId, teamLeave
         }
         return response.json();
     })
-    .then(data => {
-        // Get the dialog container
         const dialog = document.getElementById('teamLeaveTrackerContent');
-        dialog.style.display = 'flex';
+        dialog.style.display = 'block width:500px';
         dialog.style.flexDirection = 'column';
         dialog.innerHTML = '';
-
-        // Create heading
         const headingDiv = document.createElement('div');
         headingDiv.style.display = 'flex';
         headingDiv.style.justifyContent = 'space-between';
@@ -524,12 +418,9 @@ function sendEmployeeIdForLeaveTracker(appliedBy, buttonName, leaveId, teamLeave
             <p><strong>Total</strong></p>
         `;
         dialog.appendChild(headingDiv);
-
-        // Create data rows
         data.forEach(teamLeaveTracker => {
             const rowDiv = document.createElement('div');
             rowDiv.style.display = 'flex';
-
             rowDiv.classList.add('column');
                const newLeaveName = leaveNameMapping[teamLeaveTracker.leaveName] || teamLeaveTracker.leaveName;
             rowDiv.innerHTML = `
@@ -540,19 +431,14 @@ function sendEmployeeIdForLeaveTracker(appliedBy, buttonName, leaveId, teamLeave
             `;
             dialog.appendChild(rowDiv);
         });
-
          const buttonContainer = document.createElement('div');
                 buttonContainer.classList.add('button-container');
                  buttonContainer.style.marginTop = 'auto';
                          buttonContainer.style.display = 'flex';
                          buttonContainer.style.justifyContent = 'flex-end';
-
-                // Create the first button with the provided buttonName
                 const actionButton = document.createElement('button');
                 actionButton.textContent = buttonName;
                 actionButton.classList.add('btn', 'btn-primary', 'teamApproveButton');
-
-                // Optionally, add an event listener to the action button
                 actionButton.addEventListener('click', () => {
                  if (buttonName === 'Approve') {
                  console.log("Button Name.." + buttonName);
@@ -562,37 +448,20 @@ function sendEmployeeIdForLeaveTracker(appliedBy, buttonName, leaveId, teamLeave
                  dialog.style.display= 'none';
                  sendLeaveAction(leaveId, 0, teamLeaveItem);
                  }
-
                 });
-
-                // Create the close button
                 const closeButton = document.createElement('button');
                 closeButton.textContent = 'Close';
-                closeButton.classList.add('btn', 'btn-secondary', 'teamCloseButton'); // Bootstrap classes for styling
-
-                // Add an event listener to close the dialog
+                closeButton.classList.add('btn', 'btn-secondary', 'teamCloseButton');
                 closeButton.addEventListener('click', () => {
                 dialog.style.display= 'none';
                     dialog.innerHTML = '';
                 });
-
-                // Append both buttons to the button container
                 buttonContainer.appendChild(actionButton);
                 buttonContainer.appendChild(closeButton);
-
-                // Append the button container to the dialog
                 dialog.appendChild(buttonContainer);
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-
-}
-
+    }
 function sendLeaveAction(leaveId, approve, teamLeaveItem) {
-    let url = `http://localhost:8080/Leava/leave/Apply?leaveId=${leaveId}&approve=${approve}`;
-
-    // Send the request
+    let url = `http://localhost:8080/Leava/leave/Tracker?leaveId=${leaveId}&approve=${approve}`;
     fetch(url, {
         method: 'PUT'
     })
@@ -615,3 +484,4 @@ function sendLeaveAction(leaveId, approve, teamLeaveItem) {
     });
     saveTeamLeaves();
 }
+

@@ -1,5 +1,6 @@
-<!Doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,18 +9,18 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+
+<body class="bg-dark">
 <div class="container mainContainer">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="mainHeading">Leave Management</h2>
         <div class="d-flex align-items-center" id="profileContainer">
             <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="  alt="Profile" class="rounded-circle me-2" width="40" id="profilePic">
-            <span id="userName">Khuswanth</span>
+            <span id="userName" class="fw-bold text-white">Khuswanth</span>
             <button id="logoutBtn" class="btn btn-danger mt-2">Logout</button>
         </div>
     </div>
 
-    <!-- Tabs -->
 
     <ul class="nav nav-tabs mb-4" id="tabs">
         <li class="nav-item">
@@ -31,7 +32,7 @@
             <a class="nav-link" id="teamLeaveRequestsTab" href="#teamLeaveRequests">Team Leave Requests</a>
         </li>
     </ul>
-    <div class="tab-content">
+    <div class="tab-content" id="leaveInfoDiv">
         <div class="tab-pane fade show active" id="Home">
             <div class="card p-4">
                 <h2>1. Application Roles</h2>
@@ -124,7 +125,7 @@
 
         </div>
 
-                <div class="tab-content">
+    <div class="tab-content">
         <div class="tab-pane active" id="leaveRequests">
             <div class="leave-container" id="leaveContainer">
                 <div class="row" id="leave-header">
@@ -135,13 +136,14 @@
                     <div class="col-md-2"><strong>Reason</strong></div>
                     <div class="col-md-2"><strong>Status</strong></div>
                 </div>
-                <!-- leave requests adding here -->
+                <!-- Leave requests will here -->
             </div>
 
             <div>
                 <button id="addLeaveBtn" class="btn btn-primary">Add Leave</button>
             </div>
         </div>
+
 
         <div class="tab-pane active" id="teamLeaveRequests">
             <div class="team-leave-container" id="teamLeaveContainer">
@@ -156,7 +158,7 @@
                     <div class="team-action"><strong>Actions</strong></div>
 
                 </div>
-                <!-- team leave requests will be adding here -->
+                <!-- Team leave requests will be here -->
             </div>
         </div>
     </div>
@@ -208,7 +210,7 @@
         <dialog id="teamLeaveTrackerContent" class="teamLeaveTrackerContent">
         </dialog>
     </div>
-    </div>
+</div>
 </div>
 <script src="index.js"></script>
 </body>
